@@ -18,7 +18,14 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-
+    <span class="post-navigation">
+        <p>
+        <a href="{{page.next.url}}">Next post</a>
+        </p>
+        <p>
+        <a href="{{page.previous.url}}">Previous post</a>
+        </p>    
+    </span>
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}

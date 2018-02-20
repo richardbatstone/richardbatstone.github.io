@@ -8,25 +8,32 @@ layout: default
     
     
 <div class="blurb">
-	<h1>Richard Batstone</h1>
-	<p>A <em>placeholder</em> for my personal site. <a href="/about">Read more about me.</a></p>
+	<h1>Sleep furiously</h1>
+	<p>A blog about regulation, privacy and ethics in AI. <a href="/about">Read more about me.</a></p>
 </div><!-- /.blurb -->
   
   {{ content }}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
+  <ul class="latest-post">
+      {% assign latestPost = site.posts.first %}
+      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+      
+          <span class="post-meta">{{ latestPost.date | date: date_format }}</span>
+      
+      <h2>
+          {{latestPost.title}}
+      </h2>
+          
+          <span class="post-content">{{latestPost.content}}</span>
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  
+  <h3>
+      <p>
+      <a href="{{ "blog/index/html" | relative_url }}">Previous posts</a>
+      </p>
+      <p>
+  <span class="rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></span>
+      </p>
+    </h3>
 
 </div>
