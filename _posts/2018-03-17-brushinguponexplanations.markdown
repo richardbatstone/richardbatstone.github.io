@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Brushing up on explanations"
-date:   2018-03-18 12:02:25 +0000
-categories: GDPR explanation counterfactuals
+date:   2018-03-17 12:02:25 +0000
+categories: GDPR
 ---
 Next week, I am off to the [Alan Turing Institute](https://www.turing.ac.uk/) for a workshop titled *"The GDPR and beyond: Privacy, Transparency and the Law"* and, in preparation, I am catching up on my GDPR reading. I am a little late to the GDPR gravy train. The professional services space is choking with thought pieces, implementation guides and bespoke training (all of which you *must* buy / read / share if you are to have any hope of avoiding criminal charges for data related offences come May). Almost every major corporate I've worked with has a GDPR compliance programme. Nevertheless, there are some knotty (and interesting) issues in the GDPR and this seems like a good opportunity to catch up with current thinking, and add my two cents.
 

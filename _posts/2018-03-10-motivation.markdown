@@ -2,7 +2,7 @@
 layout: post
 title:  "Motivation"
 date:   2018-03-10 12:02:25 +0000
-categories: about
+categories: other
 ---
 This is not intended to be a blog about how we should ‘regulate AI’. 
 
