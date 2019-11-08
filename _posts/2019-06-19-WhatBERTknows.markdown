@@ -14,6 +14,8 @@ This isn’t a film club but is instead this week's launch of [UCL’s NLP group
 
 This leads to the central topic of Riedel’s keynote talk: UCL’s recent work in knowledge base construction. A knowledge base is a set of structured information (usually in the form of a graph) which represents entities (and the relationships between those entities) that have been extracted from unstructured sources. They are what allows Google to answer simple questions about the world: when I search “What is the population of Nova Scotia?”, Google can look up Nova Scotia in its knowledge graph, query the population relationship and return the answer “959,942”. The ability to query data in this way would be useful in all sorts of industries, not least law (think disclosure, research and matter management).
 
+![novascotia](/images/novascotia.png){:class="img-responsive"}
+
 Building a knowledge base by hand is enormously time consuming (and clearly counter-productive if you only want to query your data in respect of a particular project - e.g. in disclosure), so finding methods for automatically constructing them is a hot area of research. Typical approaches split the problem into a pipeline of tasks: identify relevant entities in the texts (like cities and countries), cluster other references to those entities, identify semantic relationships between entities (like capitals, populations) etc. Each of these steps hides a mountain of complexity and the results are usually not good enough to use without manual review.
 
 ### Enter BERT
