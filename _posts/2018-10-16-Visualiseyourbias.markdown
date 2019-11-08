@@ -12,6 +12,6 @@ There are a few toy models to play with online and if you have a spare 10 minute
 
 There might also be a place for some capabilities like these to be made available to people who are the subject of a model’s decision making. For example, the “counterfactual” feature shows you, for a given input, the nearest input for which the model predicted a different outcome. That is, it can show you how the world would need to be different for you to get the result you want. Suitably anonymised, that would be fascinating information for someone (for example) applying for an online credit card, and damning if the model revealed the only difference between a successful and unsuccessful applicant was their gender, race or other protected characteristic.
 
-> What If... you could inspect a machine learning model, with no coding required? <https://pair-code.github.io/what-if-tool/index.html>
+> What If... you could inspect a machine learning model, with no coding required? [Google's What If tool](https://pair-code.github.io/what-if-tool/index.html)
 
-![equity](/images/equity.JPG){:class="img-responsive"}
+![equity](/images/equity.jpg){:class="img-responsive"}
