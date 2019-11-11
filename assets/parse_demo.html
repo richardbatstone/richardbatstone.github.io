@@ -1,0 +1,42 @@
+
+<html>
+<body style="background-color:white">
+
+<textarea rows=4 cols=100 id="textin">
+*Data*, +Light confidentiality provisions+ 
+*Confi. Data* +Like a whole load of obgliations+ 
+and *Personal Data* +OMG please don't lose this stuff+
+</textarea>
+
+<p>
+<button onclick="parse()">Parse text</button>
+</p>
+
+<p id="textout"></p>
+
+<script src="https://storage.googleapis.com/rob-visual-markup/fabric.min.js" charset="UTF-8"></script>
+<script src="https://storage.googleapis.com/rob-visual-markup/render2.js" charset="UTF-8"></script>
+<canvas id="drawing" width="600" height="400"></canvas>
+<script>
+
+var canvas = new fabric.Canvas('drawing');
+document.getElementById('drawing').fabric = canvas;
+
+function parse() {
+
+var canvas = document.getElementById('drawing').fabric;
+var string = document.getElementById("textin").value;
+
+var node_regex = new RegExp("\\*.+?\\*", "g");
+var description_regex = new RegExp("\\*.+?\\*|\\+.+?\\+", "g");
+
+var found_nodes = string.match(node_regex);
+var found_descriptions = string.match(description_regex);
+
+render(found_descriptions, canvas);
+}
+</script>
+
+</body>
+</html>
+        
