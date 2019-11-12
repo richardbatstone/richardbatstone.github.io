@@ -1,18 +1,20 @@
 
 <html>
 <body style="background-color:white">
-
-<textarea rows=4 cols=100 id="textin">
-*Data*, +Light confidentiality provisions+ 
-*Confi. Data* +Like a whole load of obgliations+ 
-and *Personal Data* +OMG please don't lose this stuff+
-</textarea>
-
-<p>
-<button onclick="parse()">Parse text</button>
+<p style="font-family:&quot;Calibri&quot;,sans-serif; font-size:9pt; font-style:italic">
+Text entered into the box below will be automatically converted into a visual following a simple mark-up scheme:
 </p>
-
-<p id="textout"></p>
+<ul style="font-family:&quot;Calibri&quot;,sans-serif; font-size:9pt; font-style:italic">
+    <li>Text between * will become shape labels</li>
+    <li>Text between + will become roll-over text for the immediately preceding shape</li>
+    <li>Shapes will be nested in the order they appear in the text</li>
+</ul>
+<p style="font-family:&quot;Calibri&quot;,sans-serif; font-size:9pt; font-style:italic">
+An example is set out for inspiration.
+</p>
+<textarea rows=4 cols=100 id="textin"  style="font-family:&quot;Calibri&quot;,sans-serif">
+When sharing any *Data*, +light confidentiality provisions+ will apply. When that Data is *Confidential Data*, many +more obligations+ will apply. If the Data is *Personal Data* the +strictest obligations+ apply.
+</textarea>
 
 <script src="https://storage.googleapis.com/rob-visual-markup/fabric.min.js" charset="UTF-8"></script>
 <script src="https://storage.googleapis.com/rob-visual-markup/render2.js" charset="UTF-8"></script>
@@ -21,7 +23,11 @@ and *Personal Data* +OMG please don't lose this stuff+
 
 var canvas = new fabric.Canvas('drawing');
 document.getElementById('drawing').fabric = canvas;
+    
+const textbox = document.getElementById('textin');
 
+textbox.addEventListener('input', parse);
+    
 function parse() {
 
 var canvas = document.getElementById('drawing').fabric;
@@ -35,6 +41,9 @@ var found_descriptions = string.match(description_regex);
 
 render(found_descriptions, canvas);
 }
+
+parse();
+
 </script>
 
 </body>
