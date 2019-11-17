@@ -7,10 +7,6 @@ categories: other
 
 *I got round to writing up my master's project work. The project repository is [here](https://github.com/richardbatstone/legal_language_compression). My thesis is [here](https://github.com/richardbatstone/legal_language_compression/blob/master/Richard%20Batstone%20-%20Project%20Repot%202019%20(21.08.19).pdf) and viva slides are [here](https://github.com/richardbatstone/legal_language_compression/blob/master/Richard%20Batstone%20-%20Project%20Viva%202019%20(22.08.19).pptx). An introduction and summary of the project is below.*
 
-# Legal language compression
-
-This repository contains the code, data and write-ups connected with my master's project: Sentence Compression for Improved Understanding of Legal Text. In addition to my thesis and viva slides, I have tried to highlight (and summarise) below the aspects of the project which might be most useful to others interested in legal language compression. 
-
 ## Motivation
 
 The project is motivated by a desire to improve how law is communicated. It starts from the position that people *should* be able to understand the laws that govern their lives and observes that, in general, people struggle to understand law. Lots of thinking has been done on this topic and I happily draw on previous work. For example:
