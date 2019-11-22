@@ -30,15 +30,15 @@ Rather than attempting to cater to all of these audiences at the same time (thro
 
 I explore simplification through compression. The aim of a compression system is, given an input text, to return a simplified version of that text. The compression is achieved by removing words from the original. For example, consider the extract from the Mental Capacity Act 2005 below.
 
-![Extract from the Mental Capacity Act](./images/MCA_extract.PNG)
+![Extract from the Mental Capacity Act](https://richardbatstone.github.io/images/MCA_extract.PNG)
 
 This provision, a single sentence comprising 50 words written in the passive voice, is not very 'readable'. But breaking down the sentence, I suggest a decent summary of the provision is provided by the words highlighted yellow:
 
-![Extract from the Mental Capacity Act](./images/MCA_extract_hs.PNG)
+![Extract from the Mental Capacity Act](https://richardbatstone.github.io/images/MCA_extract_hs.PNG)
 
 If the core meaning of the provision is captured by these words you might ask why we need the rest of the words. The answer comes back to the tension mentioned above: in some circumstances, and for some audiences, these extra words are crucial. They add precision, but at the expense of readability.
 
-![Extract from the Mental Capacity Act](./images/MCA_extract_ha.png)
+![Extract from the Mental Capacity Act](https://richardbatstone.github.io/images/MCA_extract_ha.png)
  
 The aim of the compression system is to automatically return the words highlighted yellow and delete the rest: compression by deletion. This type of system is inherently more limited that a general simplification system. There are only certain deletions that can be made if the output is to remain grammatically valid. And the system can't do any paraphrasing or lexical substitution to increase the readability of the output (it can't, for example, re-write a sentence in the active voice). However, general purpose simplification systems are *really* hard to build, so starting with compression by deletion seems sensible.
 
@@ -91,7 +91,7 @@ Interestingly, making these sorts of deletions can also help language parsers co
 
 ### Context assumptions
 
-Another feature of legislative language is that fact or circumstances which, in non-legal language, would usually be assumed are, in legal rules, made explicit. For example, from the Children's Act 1989:
+Another feature of legislative language is that facts or circumstances which, in non-legal language, would usually be assumed are, in legal rules, made explicit. For example, from the Children's Act 1989:
 
 > Where a child's father and mother were married to each other at the time of his birth, they shall each have parental responsibility for the child.
 
@@ -141,23 +141,23 @@ The rules-based model has 5 types of rules for determining what words to remove 
 
 1. Text in parentheses: Language within parentheses is, by construction, often parenthetical to the main content of the sentence.
 
-![Rules-model 1](./images/rules_1.png)
+![Rules-model 1](https://richardbatstone.github.io/images/rules_1.png)
 
 2. Certain syntactic sub-trees: For example, sub-trees beginning "A reference to..." are removed, as this type of language can often be inferred from context.
 
-![Rules-model 2](./images/rules_2.png)
+![Rules-model 2](https://richardbatstone.github.io/images/rules_2.png)
 
 3. Common extraneous legal phrases: For example, caveats and prepositional phrases that don't contribute to a high-level understanding of the text, such as "so far as is reasonably practicable" or "as the case may be".
 
-![Rules-model 3](./images/rules_3.png)
+![Rules-model 3](https://richardbatstone.github.io/images/rules_3.png)
 
 4. Certain alternative sub-clauses: For example, where the first word of the sub-clause is "or" and the final word is the same as the word immediately preceding the sub-clause (a fairly common legal pattern).
 
-![Rules-model 4](./images/rules_4.png)
+![Rules-model 4](https://richardbatstone.github.io/images/rules_4.png)
 
 5. Doublets: single concepts expressed as conjunctions of two near synonymous concepts to ensure generality. (Doublets are identified by matching "X and Y" patterns and compressing those patterns where the similarity between the word embeddings for X and Y is sufficiently high. The word embeddings are taken from spaCy's in-built 'Glove' vectors. The similarity threshold is set by trial and error. Even so, this rule is the least precise of the rules described as word embedding similarity does not necessarily imply synonymy. For example, the word embeddings for "mother" and "father" are similar, but they cannot be treated as synonyms in a legislative context).
 
-![Rules-model 5](./images/rules_5.png)
+![Rules-model 5](https://richardbatstone.github.io/images/rules_5.png)
 
 See page 37 of my thesis for more details.
  
@@ -165,7 +165,7 @@ See page 37 of my thesis for more details.
 
 The performance of the different models have to be seen through the lens of their relative *compression ratios*: the average degree of compression applied by the model. Different compression ratios are illustrated below.
 
-![Compression ratio](./images/compression_ratio.PNG)
+![Compression ratio](https://richardbatstone.github.io/images/compression_ratio.PNG)
 
 It only makes sense to compare models which generate similar compression ratios (though, of course, we can also comment on the appropriateness of generated compression ratio - did the model tend to delete too much or not enough?).
 
@@ -179,7 +179,7 @@ A number of examples from the different models are set out in my viva slides (sl
 
  - **Effectiveness of implicit transfer learning**: There was little difference between the LSTM and BERT "base" models (the models that were trained on the news headline corpus only). That was surprising as I expected the BERT model (with all its millions of parameters) to perform better. However, comparing the LSTM and BERT models that were trained *only* on the legislative corpus, the LSTM model collapsed whilst the BERT model was still able to perform. So the depth of the BERT language model does have an edge over the word2vec embeddings, but the advantage largely disappears by the time the pre-training task is introduced.
  
- - **Effectiveness of explicit transfer learning**: As identified above, pre-training on the news headline corpus was essential for the LSTM models (without it, the models collapsed). However, it wasn't that effective overall: (i) there was little difference between the LSTM model using ordinary fine-tuning and the LSTM model using the ULMFiT procedure; and (ii) the model with the compression ratio closest to the target (the BERT and rules-based ensemble model trained only of the legislative corpus) didn't use the pre-training task at all. Taken together, this suggests there is too great a difference between the source domain (news articles) and task (compression of sentences) and the target domain (legislation) and target task (compression of sentences and fragments).
+ - **Effectiveness of explicit transfer learning**: As identified above, pre-training on the news headline corpus was essential for the LSTM models (without it, the models collapsed). However, it wasn't that effective overall: (i) there was little difference between the LSTM model using ordinary fine-tuning and the LSTM model using the ULMFiT procedure; and (ii) the model with the compression ratio closest to the target (the BERT and rules-based ensemble model trained only on the legislative corpus) didn't use the pre-training task at all. Taken together, this suggests there is too great a difference between the source domain (news articles) and task (compression of sentences) and the target domain (legislation) and target task (compression of sentences and fragments).
 
 There're a few ways the work could be developed:
 
