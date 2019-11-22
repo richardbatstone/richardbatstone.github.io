@@ -14,7 +14,7 @@ The project is motivated by a desire to improve how law is communicated. It star
  - [Curtotti and McCreath's work](https://ojs.law.cornell.edu/index.php/joal/article/view/16) examining the relationship between wider access to law (through digitisation) and general understanding of law; and
  - [the work of the Office of the Parliamentary Counsel](https://www.gov.uk/government/publications/when-laws-become-too-complex) into the causes of complexity in legislation.
 
-One of the causes of poor understanding of law (specifically, legislation) that emerges from this work is that the language, style and structure of legislation is not 'user-friendly'. Certainly, the clarity and accessibility of the language used to express our laws has certainly improved in recent decades. But a cursory glance at legislation entering the statute book gives an indication of the level of complexity that remains.
+One of the causes of poor understanding of law (specifically, legislation) that emerges from this work is that the language, style and structure of legislation is not 'user-friendly'. Certainly, the clarity and accessibility of the language used to express our laws has improved in recent decades. But a cursory glance at legislation entering the statute book gives an indication of the level of complexity that remains.
 
 I argue that this complexity arises from a fundamental tension in legislative drafting: legislation has to speak to many different audiences, and those audiences have different needs.
 
@@ -44,17 +44,17 @@ The aim of the compression system is to automatically return the words highlight
 
 I develop a few different models to carry out automatic compression (by deletion) of legal language:
 
- - a rules based system which compresses legal text through a combination of removing particular syntactic sub-trees and phrase matching a set of patterns;
+ - a rules-based system which compresses legal text through a combination of removing particular syntactic sub-trees and phrase matching a set of patterns;
  - a statistical system using LSTMs; and
  - a statistical system based on Transformers.
  
-The rules based model is summarised below. If you are interested in the statistical model setup, go to page 35 of my thesis for full details. In brief, the approach is to treat the problem as a sequence-to-sequence task where the input is the uncompressed text and the output is a sequence of 1s and 0s, indicating whether the corresponding word is to be retained or deleted. The code for these different systems is also included in this repository but, ultimately, I didn't think any of these systems performed compellingly enough to turn them into production versions. Therefore, they are quite rough around the edges.
+The rules-based model is summarised below. If you are interested in the statistical model setup, go to page 35 of my thesis for full details. In brief, the approach is to treat the problem as a sequence-to-sequence task where the input is the uncompressed text and the output is a sequence of 1s and 0s, indicating whether the corresponding word is to be retained or deleted. The code for these different systems is also included in this repository but, ultimately, I didn't think any of these systems performed compellingly enough to turn them into production versions. Therefore, they are quite rough around the edges.
 
 ## Data
 
 The fuel for statistical systems is data. The key data sources I used in the project are:
 
- - a corpus of 200,000 compressed and uncompressed sentence pairs drawn from news headlines and the associated news articles, compiled by Filippova and others: https://github.com/google-research-datasets/sentence-compression
+ - a corpus of 200,000 compressed and uncompressed sentence pairs drawn from news headlines and the associated news articles, compiled by Filippova and others: <https://github.com/google-research-datasets/sentence-compression>
  - a corpus of 1,000 compressed and uncompressed sentence pairs drawn from legislation, constructed for the purpose of the project and included in this repository.
  
 The legislative compressions have some quirks. For example, unlike the news headline compressions, not all of the examples are syntactically complete sentences. That's because, in legislation, single sentences can stretch across multiple sub-sections, often running to a very large number of words. I think it's useful to be able to deal with this language at the sub-section level, so the legislative compression includes entries like:
