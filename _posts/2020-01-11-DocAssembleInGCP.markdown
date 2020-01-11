@@ -94,6 +94,8 @@ Go and have a cup of tea. It can take about 15 minutes for docassemble to instal
 
 Once you've finished your biscuits, go back to the VM instance page and click on your VM's "External IP" (it will be a different number to the one shown below). This should open up a new browser tab.
 
+If it doesn't open a new tab, you might need to pause / disable an ad blocker.
+
 ![External IP](https://richardbatstone.github.io/images/GCP_VM_http.PNG)
 
 ### Step 9
