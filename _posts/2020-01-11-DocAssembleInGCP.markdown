@@ -42,7 +42,7 @@ You'll automatically be set up with a project: "My First Project".
 
 The next step is to select "Compute Engine" from the left hand menu.
 
-![Select Compute Engine](https://richardbatstone.github.io/images/GCP_compute_engine.PNG)
+![Select Compute Engine](https://richardbatstone.github.io/images/GCP_compute_engine_wide.PNG)
 
 ### Step 4
 
