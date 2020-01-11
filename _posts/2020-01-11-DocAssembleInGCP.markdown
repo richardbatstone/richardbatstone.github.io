@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Docassemble: quickstart in Google Cloud Platform"
-date:   2020-01-10 12:02:25 +0000
+date:   2020-01-11 12:02:25 +0000
 categories: other
 ---
 
@@ -13,24 +13,26 @@ If you want to start playing with docassemble you either have to access it throu
 
  - GCP is what I got started on (my master's course was taught using GCP); and
  - you can get going on GCP without ever having to look at a commnand line, which may or may not be a good thing.
+ 
+I also think quite a lot of lawyers get referred to docassemble as something to experiment / learn a bit of coding with. So I wanted to write a set up guide that assumes abosolutely zero prior knowledge. 
 
-## Noddy deployment on GCP
+## Basic deployment on Google Cloud Platform
 
-Assuming you have: (i) a google account (i.e. a google email address); and (ii) otherwise, absolutely no knowledge of docker or cloud-based computing, this is what you do:
+Assuming you have: (i) a google account (e.g. a google email address); and (ii) otherwise, absolutely no knowledge of docker or cloud-based computing, this is what you do:
 
 ### Step 1
 
 Head over to [Google Cloud Platform](https://cloud.google.com/) and hit "Try it free".
 
-![GCP Setup](https://richardbatstone.github.io/images/GCP_set_up.PNG)
+![GCP Setup](https://richardbatstone.github.io/images/GCP_landing.PNG)
 
 ### Step 2
 
 Complete the 2 step registration. It costs money to run things in the cloud, but Google will give you a bunch or credits to get started (more than enough to play with docassemble for a few months). You do have to provide credit card details to register but it promises not to autocharge you unless you manually upgrade to a paid account.
 
-*See step 11 for how to delete your docassemble deployment to avoid running down your credits.*
+*See step 10 for how to delete your docassemble deployment to avoid running down your credits.*
 
-![GCP Setup](https://richardbatstone.github.io/images/GCP_landing.PNG)
+![GCP Setup](https://richardbatstone.github.io/images/GCP_set_up.PNG)
 
 ### Step 3 
 
@@ -48,7 +50,7 @@ You'll be presented with this prompt box for setting up new VM images. Click "Cr
 
 ### Step 5 (hardest step)
 
-You'll be presented with a menu of options for your new VM. It should look something like the below. If you like, give your VM a new name (but it doesn't matter). 
+You'll be presented with a menu of options for your new VM. It should look something like the below. If you like, give your VM a new name (but it doesn't matter). The location of your VM doesn't matter either.
 
 ![VM Options](https://richardbatstone.github.io/images/GCP_VM_options1.PNG)
 
@@ -56,27 +58,19 @@ There are 5 things you need to do on this options page:
 
 1. Check the box that says "Deploy a container image to this VM instance"
 
-![VM Options 2](https://richardbatstone.github.io/images/GCP_VM_options2.PNG)
-
-2. You'll be asked to enter the container image. In the text prompt, write: "docker.io/jhpyle/docassemble:latest"
-
-![VM Options 3](https://richardbatstone.github.io/images/GCP_VM_options3.PNG)
+2. You'll be asked to enter the container image. In the text prompt, type: "docker.io/jhpyle/docassemble:latest"
 
 3. Next, click "change" on the "Boot disk" settings.
 
-![VM Options 4](https://richardbatstone.github.io/images/GCP_VM_options4.PNG)
-
 4. A new window will pop up. You'll see the size of the boot disk is set to 10GB. Change this to 32GB. Hit select to return to the main options window.
-
-![VM Options 5](https://richardbatstone.github.io/images/GCP_VM_options5.PNG)
 
 5. Finally, in the firewall setting, check the box that say "Allow HTTP traffic".
 
-![VM Options 5](https://richardbatstone.github.io/images/GCP_VM_options6.PNG)
-
 *If you want to use docassemble for real interviews with real people you should use HTTPS, not HTTP. That takes a few more setup steps: see the docassemble [docs](https://docassemble.org/docs/docker.html#https). HTTP is fine for playing around.*
  
-Once you've made all these changes, hit "Create" at the bottom of the options window.
+Once you've made all these changes, your options screen should look something like the below. Hit "Create" at the bottom of the window.
+
+![VM Options Complete](https://richardbatstone.github.io/images/GCP_VM_options_all.PNG)
 
 ### Step 6
 
