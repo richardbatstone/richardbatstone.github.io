@@ -4,6 +4,9 @@ title:  "Motivation"
 date:   2018-03-10 12:02:25 +0000
 categories: other
 ---
+
+![Header](https://richardbatstone.github.io/images/DD_001.PNG)
+
 This is not intended to be a blog about how we should ‘regulate AI’. 
 
 Instead, it is my attempt to bridge the knowledge gap between, on the one hand, developers and research scientists working in and around the field of AI and, on the other, lawyers, regulators and policy makers who need to come to informed views about how AI is being deployed and the risks and opportunities it brings. That is, the knowledge gap that is epitomised by the following (erroneous) intuitions:
