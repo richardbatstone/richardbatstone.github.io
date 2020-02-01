@@ -4,6 +4,9 @@ title:  "Transfer your learning"
 date:   2018-12-10 12:02:25 +0000
 categories: other
 ---
+
+![Header](https://richardbatstone.github.io/images/DD_008.PNG)
+
 It's not often that you see academic papers cited in the national press, so it was great to see the [Financial Times](https://www.ft.com/content/a3943548-e9cb-11e8-94da-a6478f64c783) pick up on some recent work in 'transfer learning' for natural language processing (NLP).
 
 ### What is transfer learning?

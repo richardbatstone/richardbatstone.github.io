@@ -4,6 +4,9 @@ title:  "Harvard's Caselaw Access Project"
 date:   2018-11-05 12:02:25 +0000
 categories: other
 ---
+
+![Header](https://richardbatstone.github.io/images/DD_007.PNG)
+
 It was good news for budding legal AI researchers this week as Harvard announced its "[Caselaw Access Project](https://case.law/)". The project makes 6.4 million US case reports freely available from the Harvard Law School Library. The disparate nature of state-level case reporting had previously made it difficult for the public (or anyone without commercial tools) to access consolidated data. Since data is the fuel of ML models, public access means more people will be able to explore the data and develop their own models.
 
 What's key is that this is not just a data dump: users can query the data through an API, or bulk download it for processing. Adding the metadata to make this possible is a huge task and has taken the Harvard team years.

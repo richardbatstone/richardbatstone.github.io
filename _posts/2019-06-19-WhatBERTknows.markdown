@@ -4,6 +4,9 @@ title:  "What BERT knows"
 date:   2019-06-19 12:02:25 +0000
 categories: other
 ---
+
+![Header](https://richardbatstone.github.io/images/DD_009.PNG)
+
 In a lecture theatre that [once featured](https://www.ucl.ac.uk/news/2016/nov/7-ucls-best-throwback-photographs) in  the movie Inception, Sebastian Riedel discusses how that particular film didn’t make any sense:
 
 > It’s not internally consistent. There are points where a person falls in dream level L+1 but fails to wake up in dream level L”.

@@ -4,6 +4,9 @@ title:  "Veil of ignorance - London Law Expo 2018"
 date:   2018-10-10 12:02:25 +0000
 categories: other
 ---
+
+![Header](https://richardbatstone.github.io/images/DD_005.PNG)
+
 To design the law firm of the future, we should adopt a "veil of ignorance" - or so argues Dr Heather Anson. 
 
 Anson, speaking at the London Law Expo (an annual event with exhibitors and speakers from across the legal tech world), suggests that too often law firms think about the future service they might provide by reference to the things that legal tech companies offer for sale. Instead, law firms should follow philosopher John Rawls, who argued that in order to create fair and just laws we should imagine that we know nothing about the kind of person we will be (or the position that we will hold) in the society that we are designing. We should design the society from behind a veil of ignorance. Since we won't know our status in the society, the thought experiment encourages us to create laws that will not penalise particular people or groups of people.

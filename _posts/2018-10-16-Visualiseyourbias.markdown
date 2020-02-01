@@ -4,6 +4,9 @@ title:  "Visualise your bias"
 date:   2018-10-16 12:02:25 +0000
 categories: other
 ---
+
+![Header](https://richardbatstone.github.io/images/DD_006.PNG)
+
 Tackling bias and unfairness in machine learning models can be tricky. The more complex the model, the harder it can be for developers and users to interrogate how inputs relate to outputs, and there have been many well publicised examples of models producing weird and/or unsettling results.
 
 Part of the solution might be to empower more people to inspect what is going on inside ML models. That’s where I think tools like Google’s new “What-if Tool” will come in. The “What-if Tool” is a plug-in for Tensorboard, Google’s existing visualisation package for its popular ML platform, Tensorflow. But you don’t need to be familiar with Tensorflow to use the tool: the idea is that developers build a model and then anyone can poke around and see how the model treats different inputs. 

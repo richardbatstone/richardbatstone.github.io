@@ -5,6 +5,8 @@ date:   2018-07-18 08:02:25 +0000
 categories: Data, Machine Learning, Legal Language
 ---
 
+![Header](https://richardbatstone.github.io/images/DD_004.PNG)
+
 I’ve recently been looking for corpuses of “legal” language to use as a starting point for machine learning applications. I have a few specific tasks in mind but to start with I’m just interested in seeing what corpuses already exist and the tasks they’ve been used to support. Given all the excitement about “legal tech” I’d assumed there would be a few well established corpuses that are regularly used for legal language modelling etc., so I was surprised by the lack of ready-made corpuses. To that end, I thought I would write about the different types of legal language, some sources of publically available legal text and how you might go about turning these into usable corpora.
 
 ### What is legal language?

@@ -5,6 +5,8 @@ date:   2019-11-17 12:02:25 +0000
 categories: other
 ---
 
+![Header](https://richardbatstone.github.io/images/DD_010.PNG)
+
 *I got round to writing up my master's project work. The project repository is [here](https://github.com/richardbatstone/legal_language_compression). My thesis is [here](https://github.com/richardbatstone/legal_language_compression/blob/master/Richard%20Batstone%20-%20Project%20Repot%202019%20(21.08.19).pdf) and viva slides are [here](https://github.com/richardbatstone/legal_language_compression/blob/master/Richard%20Batstone%20-%20Project%20Viva%202019%20(22.08.19).pptx). An introduction and summary of the project is below.*
 
 ## Motivation

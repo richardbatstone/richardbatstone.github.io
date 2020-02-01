@@ -5,6 +5,8 @@ date:   2020-01-11 12:02:25 +0000
 categories: other
 ---
 
+![Header](https://richardbatstone.github.io/images/DD_011.PNG)
+
 ## Docassemble
 
 [Docassemble](https://docassemble.org/) is a well known open-source system for guided interviews and document assembly. I don't yet have much experience of using the platform but, from the docs and tutorials, it looks powerful and extensible.

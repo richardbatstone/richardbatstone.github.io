@@ -5,6 +5,8 @@ date:   2018-04-05 08:02:25 +0000
 categories: GDPR
 ---
 
+![Header](https://richardbatstone.github.io/images/DD_003.PNG)
+
 A quick follow up on the "GDPR and Beyond: Privacy, Transparency and the Law" conference at the [Alan Turing Institute](https://www.turing.ac.uk/).
 
 Overall, a really interesting day with lots of intelligent debate, with speakers and attendees from a broad range of fields (including an appearance from Elizabeth Denham, before she headed back to court…) Here are some of my thoughts from the day.
