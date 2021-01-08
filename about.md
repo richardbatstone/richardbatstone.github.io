@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I am a lawyer and data science student living in London. When I'm not thinking about the impact of AI, I'm usually walking in the mountains / cooking / watching crap TV. Views and opinions are my own (and are never legal or investment advice).
+I am a lawyer and wannabe data scientist, product manager and designer living in London. When I'm not thinking about technology and law, I'm usually walking in the mountains / cooking / watching crap TV. Views and opinions are my own (and are never legal or investment advice).
 
 *Sleep furiously*, as in *colourless green ideas sleep furiously*. A working title, which I am sure I will come to regret.
 
